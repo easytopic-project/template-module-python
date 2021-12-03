@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  template_module_python:
+    build: .
+    environment:
+      QUEUE_SERVER: "localhost:5672"
+      INPUT_QUEUE_NAME: "ae-in"
+      OUTPUT_QUEUE_NAME: "ae-out"
+      FILES_SERVER: "http://localhost:3001"
+      RECONNECT_TIMEOUT: 3
+      RECONNECT_MAX: 30

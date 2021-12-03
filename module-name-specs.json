@@ -1,0 +1,50 @@
+{
+  "id": "template-module",
+  "name": "Template Module",
+  "description": "Template module that receives an image, a video and a text, and give everything back as output, but with the text backwords",
+  "author": "Bruno Jucá",
+  "email": "brunojuca@ice.ufjf.br",
+  "input_queue": "template-module-python-in",
+  "output_queue": "template-module-python-out",
+  "input": [
+    {
+      "id": "input-image",
+      "link": true,
+      "type": "file",
+      "required": true,
+      "accept": ["video/mp4"]
+    },
+    {
+      "id": "input-video",
+      "link": true,
+      "type": "file",
+      "required": true,
+      "accept": ["video/mp4"]
+    },
+    {
+      "id": "input-text",
+      "link": false,
+      "type": "text",
+      "required": true
+    }
+  ],
+  "output": [
+    {
+      "id": "echo-image",
+      "link": true,
+      "type": "file",
+      "accept": ["video/mp4"]
+    },
+    {
+      "id": "echo-video",
+      "link": true,
+      "type": "file",
+      "accept": ["video/mp4"]
+    },
+    {
+      "id": "echo-text",
+      "link": false,
+      "type": "text"
+    }
+  ]
+}
